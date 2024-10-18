@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{efc3ccca-51d2-4e4a-bf36-a5ba4d7ac74b}</ProjectGuid>
+    <RootNamespace>sfse2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>sfse</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>..\;..\xbyak\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4200;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\sfse_common\x64\Release\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfse_common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GameChargen.cpp" />
+    <ClCompile Include="GameConsole.cpp" />
+    <ClCompile Include="GameData.cpp" />
+    <ClCompile Include="GameExtraData.cpp" />
+    <ClCompile Include="GameForms.cpp" />
+    <ClCompile Include="GameLock.cpp" />
+    <ClCompile Include="GameMemory.cpp" />
+    <ClCompile Include="GameRTTI.cpp" />
+    <ClCompile Include="GameScript.cpp" />
+    <ClCompile Include="GameSettings.cpp" />
+    <ClCompile Include="GameTypes.cpp" />
+    <ClCompile Include="GameUI.cpp" />
+    <ClCompile Include="Hooks_Command.cpp" />
+    <ClCompile Include="Hooks_Data.cpp" />
+    <ClCompile Include="Hooks_Scaleform.cpp" />
+    <ClCompile Include="Hooks_Script.cpp" />
+    <ClCompile Include="Hooks_Version.cpp" />
+    <ClCompile Include="NiExtraData.cpp" />
+    <ClCompile Include="NiObject.cpp" />
+    <ClCompile Include="NiRTTI.cpp" />
+    <ClCompile Include="PluginManager.cpp" />
+    <ClCompile Include="ScaleformMemory.cpp" />
+    <ClCompile Include="sfse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GameRTTI.inl" />
+    <None Include="sfse.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameChargen.h" />
+    <ClInclude Include="GameConsole.h" />
+    <ClInclude Include="GameData.h" />
+    <ClInclude Include="GameEvents.h" />
+    <ClInclude Include="GameExtraData.h" />
+    <ClInclude Include="GameFormComponents.h" />
+    <ClInclude Include="GameForms.h" />
+    <ClInclude Include="GameLock.h" />
+    <ClInclude Include="GameMemory.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="GameObjects.h" />
+    <ClInclude Include="GameReferences.h" />
+    <ClInclude Include="GameReflection.h" />
+    <ClInclude Include="GameRTTI.h" />
+    <ClInclude Include="GameScript.h" />
+    <ClInclude Include="GameSettings.h" />
+    <ClInclude Include="GameSingleton.h" />
+    <ClInclude Include="GameStreams.h" />
+    <ClInclude Include="GameTypes.h" />
+    <ClInclude Include="GameUI.h" />
+    <ClInclude Include="Hooks_Command.h" />
+    <ClInclude Include="Hooks_Data.h" />
+    <ClInclude Include="Hooks_Scaleform.h" />
+    <ClInclude Include="Hooks_Script.h" />
+    <ClInclude Include="Hooks_Version.h" />
+    <ClInclude Include="NiExtraData.h" />
+    <ClInclude Include="NiObject.h" />
+    <ClInclude Include="NiRTTI.h" />
+    <ClInclude Include="NiTypes.h" />
+    <ClInclude Include="PapyrusNativeFunctions.h" />
+    <ClInclude Include="PluginAPI.h" />
+    <ClInclude Include="PluginManager.h" />
+    <ClInclude Include="ScaleformFunctions.h" />
+    <ClInclude Include="ScaleformLoader.h" />
+    <ClInclude Include="ScaleformLog.h" />
+    <ClInclude Include="ScaleformManager.h" />
+    <ClInclude Include="ScaleformMemory.h" />
+    <ClInclude Include="ScaleformMovie.h" />
+    <ClInclude Include="ScaleformState.h" />
+    <ClInclude Include="ScaleformTranslator.h" />
+    <ClInclude Include="ScaleformTypes.h" />
+    <ClInclude Include="ScaleformValue.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
